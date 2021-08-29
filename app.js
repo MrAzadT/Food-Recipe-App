@@ -9,11 +9,15 @@ const app_Key = "e07b5281f70147781458f1f9127326c6";
 searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
   search = e.target.querySelector("input").value;
-  fetchApi();
+  foodApi();
 });
-async function fetchApi() {
+async function foodApi() {
   const apiUrl = `https://api.edamam.com/search?q=pizza&app_id=${app_ID}&app_key=${app_Key}&to=20`;
   const response = await fetch(apiUrl);
   const data = await response.json();
-  console.log(data);
+  food(data.hits);
 }
+function food(data) {
+  const 
+
+};
