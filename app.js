@@ -34,7 +34,8 @@ function food(results) {
             ? result.recipe.dietLabels
             : "no data found"
         }</p>
-        <p class="item-data">Health Label: ${result.recipe.healthLabels}</p>
+        <p class="item-data">Health Label:
+         ${result.recipe.healthLabels.slice(0, 30)}</p>
     </div>
     `;
   });
