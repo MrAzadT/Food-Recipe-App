@@ -9,7 +9,9 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 10px;
 }
-
+p {
+  font-size: 0.4rem;
+}
 img {
   width: 100%;
   height: 100%;
@@ -69,10 +71,11 @@ form ion-icon {
   grid-gap: 25px;
   grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
 }
-.title {
+/* .title {
   color: #fff;
-  font-size: 2rem;
-}
+  font-size: 0.8rem;
+  color: chartreuse;
+} */
 .item {
   width: 100%;
   border-radius: 8px;
@@ -91,19 +94,20 @@ form ion-icon {
   justify-content: space-between;
 }
 .search-result .title {
-  color: whitesmoke;
+  color: gold;
   margin: 20px 10px 0 0;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 .view-btn {
   text-decoration: none;
   text-align: center;
   width: 130px;
+
   padding: 10px 0;
-  background-color: #414141;
+  background-color: #7bc559;
   color: whitesmoke;
-  font-size: 1.4rem;
+  font-size: 0.8rem;
   font-weight: 600;
   margin-top: 20px;
   border-radius: 4px;

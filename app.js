@@ -12,10 +12,11 @@ searchForm.addEventListener("submit", (e) => {
   foodApi();
 });
 async function foodApi() {
-  const apiUrl = `https://api.edamam.com/search?q=pizza&app_id=${app_ID}&app_key=${app_Key}&to=20`;
+  const apiUrl = `https://api.edamam.com/search?q=${search}&app_id=${app_ID}&app_key=${app_Key}&to=20`;
   const response = await fetch(apiUrl);
   const data = await response.json();
   food(data.hits);
+  console.log(data);
 }
 function food(results) {
   let myFood = "";
@@ -34,8 +35,8 @@ function food(results) {
             ? result.recipe.dietLabels
             : "no data found"
         }</p>
-        <p class="item-data">Health Label:
-         ${result.recipe.healthLabels.slice(0, 30)}</p>
+        <p class="item-data">Dish Type :
+         ${result.recipe.dishType}</p>
     </div>
     `;
   });
