@@ -53,7 +53,7 @@ input {
   border-radius: 15px;
   border: none;
   outline: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
   background-color: rgb(223, 223, 223);
   display: inline-block;
 }
@@ -71,11 +71,7 @@ form ion-icon {
   grid-gap: 25px;
   grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
 }
-/* .title {
-  color: #fff;
-  font-size: 0.8rem;
-  color: chartreuse;
-} */
+
 .item {
   width: 100%;
   border-radius: 8px;

@@ -18,6 +18,7 @@ async function foodApi() {
   food(data.hits);
   console.log(data);
 }
+
 function food(results) {
   let myFood = "";
   results.map((result) => {
