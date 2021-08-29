@@ -69,6 +69,10 @@ form ion-icon {
   grid-gap: 25px;
   grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
 }
+.title {
+  color: #fff;
+  font-size: 2rem;
+}
 .item {
   width: 100%;
   border-radius: 8px;

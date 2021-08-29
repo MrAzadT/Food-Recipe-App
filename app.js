@@ -17,21 +17,19 @@ async function foodApi() {
   const data = await response.json();
   food(data.hits);
 }
-function food(data) {
-  let post = "";
-  data.map((result) => {
-    post += ` 
-     
+function food(results) {
+  let myFood = "";
+  results.map((result) => {
+    myFood += `
     <div class="item">
-          <img src="./khabar.jpg" alt="" />
-      <div class="flex-container">
-          <h1 class="title">recipe item</h1>
-          <a class="view-btn" href="#">View Recipe</a>
-      </div>
-          <p class="item-data">Calories: 80</p>
-   </div>
-    
+        <img src="${result.recipe.image}" alt="" />
+    <div class="flex-container">
+        <h1 class="title">${result.recipe.label}</h1>
+        <a class="view-btn" href="#">View Recipe</a>
+    </div>
+        <p class="item-data">Calories: 80</p>
+    </div>
     `;
   });
-  searchResult.innerHTML = post;
+  searchResult.innerHTML = myFood;
 }
