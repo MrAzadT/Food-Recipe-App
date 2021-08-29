@@ -18,6 +18,20 @@ async function foodApi() {
   food(data.hits);
 }
 function food(data) {
-  const 
-
-};
+  let post = "";
+  data.map((result) => {
+    post += ` 
+     
+    <div class="item">
+          <img src="./khabar.jpg" alt="" />
+      <div class="flex-container">
+          <h1 class="title">recipe item</h1>
+          <a class="view-btn" href="#">View Recipe</a>
+      </div>
+          <p class="item-data">Calories: 80</p>
+   </div>
+    
+    `;
+  });
+  searchResult.innerHTML = post;
+}
