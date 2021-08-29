@@ -1,6 +1,6 @@
 const searchForm = document.querySelector("form");
-const searchResult = document.querySelector("search-result");
-const container = document.querySelector("container");
+const searchResult = document.querySelector(".search-result");
+const container = document.querySelector(".container");
 let search = "";
 
 const app_ID = "91bfc94b";
@@ -25,9 +25,16 @@ function food(results) {
         <img src="${result.recipe.image}" alt="" />
     <div class="flex-container">
         <h1 class="title">${result.recipe.label}</h1>
-        <a class="view-btn" href="#">View Recipe</a>
+        <a class="view-btn" target="blank"  
+        href="${result.recipe.url}" >View Recipe</a>
     </div>
-        <p class="item-data">Calories: 80</p>
+        <p class="item-data">Calories: ${result.recipe.calories.toFixed(2)}</p>
+        <p class="item-data">Diet Label : ${
+          result.recipe.dietLabels.length > 0
+            ? result.recipe.dietLabels
+            : "no data found"
+        }</p>
+        <p class="item-data">Health Label: ${result.recipe.healthLabels}</p>
     </div>
     `;
   });
